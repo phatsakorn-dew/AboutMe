@@ -1,0 +1,14 @@
+ul{ 
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    background-color: #1e1643;
+    background-size:auto;
+}
+.colorTextRun{
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

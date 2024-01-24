@@ -1,17 +1,21 @@
 import "./input.css";
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import LandingPage from "./page/LandingPage";
-import DetailsPage from './page/DetailsPage';
-import Navbar from './components/Navbar';
+import EducationPage from './page/EducationPage';
+import Home from './page/Home';
+import AboutMePage from "./page/AboutMePage";
+import Index from "./page/Index";
+import Certification from "./page/Certification";
 
 function App() {
   return (
-    <div className="bg-gradient-to-b from-[White] to-[#96BE7F] h-screen">
-      <Navbar />
+    <div className="d">
       <Routes>
-        <Route path =  "/" element={<LandingPage />}></Route>
-        <Route path = "/details" element={<DetailsPage />} />
+        <Route path = "/" element={<Home />}></Route>
+        <Route path = "/index" element={<Index />} />
+        <Route path = "/education" element={<EducationPage />} />
+        <Route path = "/aboutme" element={<AboutMePage />} />
+        <Route path = "/certification" element={<Certification />} />
        </Routes>
     </div>
   );

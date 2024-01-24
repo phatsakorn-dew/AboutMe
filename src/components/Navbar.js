@@ -1,35 +1,26 @@
-import app from "../assets/icon/app.png";
-import discord from "../assets/icon/discord.png";
-import gmail from "../assets/icon/gmail.png";
-import facebook from "../assets/icon/facebook.png";
-import profile from "../assets/icon/profile.png"
+import './Navbar.css';
+import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = () =>{
+const navigate = useNavigate();
+const handleToDetail = ()=>{navigate("/")};
+const handleToDetail2 = ()=>{navigate("/aboutme")};
+const handleToDetail3 = ()=>{navigate("/education")};
+const handleToDetail4 = ()=>{navigate("/index")};
     return(
-        <div className="flex justify-between items-center">
-           <img src ={profile} width={30} alt="profile" className="cursor-pointer" />
-           <ul className="hidden md:flex">
-            <li className="px-2">
-                <a href="https://mail.google.com/mail/u/0/"target="blank" >
-                    <img src ={discord} alt="discord"width={30}/>
-                </a>
-            </li>
+<ul>
+<li><button onClick={handleToDetail}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button></li>
+<li><button onClick={handleToDetail4}>Home</button></li>
+<li><button onClick={handleToDetail2}>AboutMe</button></li>
+<li><button onClick={handleToDetail3}>Enducation</button></li>
+<form action="#"><input id='InputText' placeholder='Search'></input><button type='submit' className='Bt' onClick={showText}><i className='fa fa-search'></i></button></form>
 
-                <li className="px-2">
-                <a href="https://discord.com/"target="blank">
-                    <img src={gmail} alt="gmail"width={30}/>
-                </a>
-                </li>
-
-                <li className="px-2">
-                    <a href="https://web.facebook.com/?_rdc=1&_rdr/"target="blank">
-                        <img src={facebook} alt="facebook" width={30}/>
-                    </a>
-                </li>
-           </ul>
-        </div>
-        
+</ul>
     )
+function showText(){
+    var searchText = document.getElementById('InputText').value;
+    alert('You input : ' + searchText);
+}
 }
 
 export default Navbar;

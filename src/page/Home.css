@@ -1,0 +1,102 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body{
+    background-image: url(/src/assets/image/BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: fadeIn 1s ease-out;
+  }
+  img{
+    background-image: url(https://i.imgflip.com/6kq1oq.jpg);
+  }
+
+  .BG:before{
+    position: absolute;
+    z-index: 2;
+    content: '';
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .BG video{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .Home{
+    position: relative;
+    text-align: center;
+    z-index: 5;
+  }
+  .T{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 6px rgb(23, 40, 112);
+    font-size: 70px;
+  }
+.T{
+  line-height: 1.5;
+}
+.RunT{
+  color: white;
+  font-size: 8px;
+  text-shadow: 2px 2px rgb(73, 146, 255);
+}
+.ButtonSite{
+  color: white;
+  border: 2px solid white;
+  width: 360px;
+  height: 120px;
+  border-radius: 17px;
+  font-size: 22px;
+}
+.ButtonSite:hover{
+  background-color: rgb(104, 162, 232);
+  animation: fadeIn 2s ease-out;
+}
+.T2{
+  text-align: center;
+  color: white;
+  text-shadow: 2px 6px rgb(23, 40, 112);
+  font-size: 30px;
+}
+.TextL{
+  font-size: 40px;
+  text-shadow: 2px 3px rgb(23, 40, 112);
+  height: 100px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.SwipeText{
+
+  font-size: 40px;
+  text-shadow: 2px 3px rgb(23, 40, 112);
+  color: rgb(148, 255, 255);
+  margin-left: 11px;
+  box-sizing: border-box;
+  animation: slider 8s linear infinite;
+  line-height: 2.5;
+
+}
+@keyframes slider{
+   0%{ margin-top: -200px;}
+   30%{ margin-top: -200px;}
+   35%{ margin-top: 0px;}
+   65%{ margin-top: 0px;}
+   70%{ margin-top: 200px;}
+   100%{ margin-top: 200px;}
+}
