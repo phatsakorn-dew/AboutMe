@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import app from "../assets/icon/app.png";
 import Navbar from '../components/Navbar';
+import './Index.css'
 
 function Index() {
 const navigate = useNavigate();
@@ -13,7 +14,9 @@ const handleToDetail3 = ()=>{navigate("/contact")};
         <div className="Index">
             <Navbar />
             <br></br>
+            <div className="Txt">
             <p><center><marquee>Welcom To About_Me Site</marquee></center></p>
+            </div>
             <p><center><img src ={app} alt="app" width={100}/></center></p>
             <p><center>This website was created. From some of my resume information.</center></p>
             <br></br>
