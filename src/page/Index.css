@@ -6,3 +6,7 @@
     font-weight: bold;
     animation: fadeIn 1s ease-out;
 }
+.CardIMG{
+    color: white;
+    width: 380px;
+}
